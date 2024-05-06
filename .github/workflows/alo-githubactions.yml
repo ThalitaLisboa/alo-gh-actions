@@ -1,0 +1,13 @@
+name: Exemplo de fluxo de trabalho  #Nome do workflow
+
+on:  #Para dizer qual é o evento que vai ativar o workflow. 
+    workflow_dispatch:  #Primitiva dispatch significa que posso ativar o fluxo de trabalho atráves de ação manual.
+
+jobs:  #Pode ter um ou mais jobs
+    acao_inicial_job: #Nome do job
+      runs-on: ubuntu-latest #Para dizer onde ele será executado, onde irá rodar
+      steps:  #Cada job pode conter uma série de passos (steps) que serão executados em sequência.
+        - name: Imprime OLA
+          run: echo "Olá, Thalita!"
+        - name: Imprime TCHAU
+          run: echo "Tchau, Thalita!"
